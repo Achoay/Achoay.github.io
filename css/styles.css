@@ -1,0 +1,33 @@
+
+*{
+    font-family: 'Black Ops One' ,regular 400;
+}
+
+body {
+    width: 100vw;
+    height: 100wh;
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(73, 87, 151);
+}
+
+.logo{
+ font-size: 6em;
+ color: white;
+}
+
+.homeButton{
+    border-radius: 2em;
+    border: 0.4em solid white;
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
