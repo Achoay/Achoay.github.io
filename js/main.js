@@ -3,11 +3,12 @@
 const saveName = () => {
   let valor = document.getElementById("playerName").value;
   sessionStorage.setItem("name", valor);
-  window.addEventListener("load", startup, false);
+
 };
 
 // Colour Picker
 
+window.addEventListener("load", startup, false);
 let colorPicker = document.getElementsByClassName("colorpicker");
 let arrayColorPicker = Array.from(colorPicker);
 function startup(event) {
@@ -34,11 +35,15 @@ function updateAll(event) {
 
 const saveLevelBeginner = () => {
     sessionStorage.setItem("level", "beginnerRow");
-    window.location.href = "./colores.html";
+    window.location.href = "./colours.html";
 }
 const saveLevelIntermediate = () => {
     sessionStorage.setItem("level", "intermediateRow");
-    window.location.href = "./colores.html";
+    window.location.href = "./colours.html";
+}
+const saveLevelAdvanced = () => {
+    sessionStorage.setItem("level", "advancedRow");
+    window.location.href = "./colours.html";
 }
 window.onload = (event) => {
     let selectedLevel = sessionStorage.getItem("level");

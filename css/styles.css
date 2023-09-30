@@ -16,7 +16,7 @@ body {
     height: 90vh;
     background-color: rgb(73, 87, 151);
 }
-.backgroundHome{
+.backgroundLong{
     height: 100vh;
     background-color: rgb(73, 87, 151);
 }
@@ -47,6 +47,6 @@ body {
 #playerName{
     height: 2.5em;
 }
-#intermediateRow, #beginnerRow{
+#intermediateRow, #beginnerRow, #advancedRow {
     display: none;
 }
