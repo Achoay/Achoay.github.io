@@ -4,15 +4,24 @@
 }
 
 body {
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 
 .background{
-    width: 100vw;
+
+    height: 90vh;
+    background-color: rgb(73, 87, 151);
+}
+.backgroundHome{
     height: 100vh;
     background-color: rgb(73, 87, 151);
+}
+.heigthNavbar{
+    height: 10vh;
 }
 
 .logo{
@@ -21,7 +30,7 @@ body {
 }
 
 .homeButton, .levelButton{
-    border-radius: 2em;
+    border-radius: 1em;
     border: 0.4em solid white;
     color: white;
     font-size: x-large;
@@ -34,4 +43,10 @@ body {
     width: 6em;
     height: 6em;
     border: 0.2em solid white;
+}
+#playerName{
+    height: 2.5em;
+}
+#intermediateRow, #beginnerRow{
+    display: none;
 }
