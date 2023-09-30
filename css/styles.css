@@ -4,8 +4,7 @@
 }
 
 body {
-    width: 100vw;
-    height: 100wh;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -21,7 +20,7 @@ body {
  color: white;
 }
 
-.homeButton{
+.homeButton, .levelButton{
     border-radius: 2em;
     border: 0.4em solid white;
     color: white;
@@ -30,4 +29,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.square{
+    width: 6em;
+    height: 6em;
+    border: 0.2em solid white;
 }
