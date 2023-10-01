@@ -1,29 +1,29 @@
 
 *{
     font-family: 'Black Ops One' ,regular;
+    background-color: rgb(73, 87, 151);
 }
-
 body {
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-
-.background{
-
+.background{  
     height: 90vh;
-    background-color: rgb(73, 87, 151);
-}
-.backgroundLong{
-    height: 100vh;
-    background-color: rgb(73, 87, 151);
 }
 .heigthNavbar{
-    height: 10vh;
+    height: 10vh;   
+}
+.navbar-brand{
+    background-color: rgba(0, 0, 0, 0);
 }
 
+/* Home Page*/
+
+.backgroundHome{
+    height: 100vh;
+}
 .logo{
  font-size: 6em;
  color: white;
@@ -39,18 +39,33 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Colours Page*/
+
 .square{
     width: 6em;
     height: 6em;
     border: 0.2em solid white;
+    border-radius: 1em;
 }
 .coloursPage{
-    overflow: hidden;
-}
-
-#playerName{
-    height: 2.5em;
+    overflow-x: hidden;
 }
 #intermediateRow, #beginnerRow, #advancedRow {
     display: none;
+}
+
+/* Levels Page*/
+
+#playerName{
+    height: 2em;
+    background-color: white;
+    display: block;
+}
+
+/* About Page */
+
+.borderAbout{
+    border: 0.2em groove white;
+    border-radius: 1em;
 }
