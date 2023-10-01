@@ -59,7 +59,7 @@ const saveLevelAdvanced = () => {
 
 // Game
 
-window.addEventListener("load", ()=>createRows());
+window.addEventListener("load", ()=>howManyRows());
 
 let board = document.getElementById("game");
 
@@ -88,3 +88,19 @@ const createRows = () => {
     mainCol.appendChild(circlesDiv);
     board.appendChild(mainCol);
 };
+const howManyRows = () => {
+
+  if (selectedLevel == "beginnerRow"){
+      for (let i=0; i < 10; i++){
+          createRows();
+      }
+  } else if (selectedLevel == "intermediateRow"){
+      for (let i=0; i < 8; i++){
+          createRows();
+      }
+  } else {
+      for (let i=0; i < 6; i++){
+          createRows();
+      }
+  }
+}
