@@ -44,6 +44,10 @@ body {
     height: 6em;
     border: 0.2em solid white;
 }
+.coloursPage{
+    overflow: hidden;
+}
+
 #playerName{
     height: 2.5em;
 }
