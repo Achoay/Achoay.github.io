@@ -9,26 +9,31 @@ const saveName = () => {
 // Colour Picker
 
 window.addEventListener("load", startup, false);
+
 let colorPicker = document.getElementsByClassName("colorpicker");
 let arrayColorPicker = Array.from(colorPicker);
+
 function startup(event) {
-  arrayColorPicker.map((elemento) => {
-    colorPicker.value = "#8a2be2";
-    colorPicker.addEventListener("input", updateFirst, false);
-    colorPicker.addEventListener("change", updateAll, false);
-    colorPicker.select();
-  }
-  )
+    arrayColorPicker.map(
+        (element) => {
+            element.value = "#8a2be2";
+            element.addEventListener("input", (event)=> updateFirst(event, element), false);
+            element.addEventListener("change", (event)=> updateAll(event, element), false);
+            element.select();
+        }
+    )
 }
 
-function updateFirst(event) {
-  const colorSquare = document.getElementById("square1");
-  colorSquare.style.backgroundColor = event.target.value;
+function updateFirst(event,element) {
+
+    let colorSquare = document.getElementById(`square${element.id}`);
+    colorSquare.style.backgroundColor = event.target.value;
 }
 
-function updateAll(event) {
-  const colorSquare = document.getElementById("square1");
-  colorSquare.style.backgroundColor = event.target.value;
+function updateAll(event,element) {
+
+    const colorSquare1 = document.getElementById(`square${element.id}`);
+    colorSquare1.style.backgroundColor = event.target.value;
 }
 
 // Hidden Rows
