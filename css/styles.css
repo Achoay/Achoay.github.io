@@ -72,10 +72,16 @@ body {
 
 /* Game Page*/
 
-.squareGame{
+.minisquare{
     width: 1.5em;
     height: 1.5em;
-    border: 0.2em solid white;
+    margin-left: 1em;
+
+}
+.squareGame{
+    width: 2em;
+    height: 2em;
+    border: 0.1em solid white;
     border-radius: 1em;
 }
 .circle{
@@ -96,4 +102,7 @@ body {
         border-radius: 50%;
         border: 0.2em solid white;
     }
+}
+#game{
+    padding-right: 10em;
 }
