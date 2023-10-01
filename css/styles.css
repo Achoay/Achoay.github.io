@@ -60,7 +60,7 @@ body {
 #playerName{
     height: 2em;
     background-color: white;
-    display: block;
+
 }
 
 /* About Page */
@@ -68,4 +68,32 @@ body {
 .borderAbout{
     border: 0.2em groove white;
     border-radius: 1em;
+}
+
+/* Game Page*/
+
+.squareGame{
+    width: 2em;
+    height: 2em;
+    border: 0.2em solid white;
+    border-radius: 1em;
+}
+.circle{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.2em solid white;
+}
+@media (min-width: 768px) {
+    .squareGame{
+        width: 4em;
+        height: 4em;
+        border: 0.2em solid white;
+    }
+    .circle{
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        border: 0.2em solid white;
+    }
 }
