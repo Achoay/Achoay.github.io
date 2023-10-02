@@ -117,7 +117,7 @@ const howManyRows = () => {
   }
 }
 
-// LEVEL
+// Level
 
 window.addEventListener("load", () => (chosenLevel()));
 
@@ -138,7 +138,7 @@ const chosenLevel = () => {
     }
 };
 
-// CHOSEN COLOURS 
+// Chosen Colours
 
 window.addEventListener("load", () => (colourMiniSquares()));
 
@@ -149,46 +149,49 @@ const colourMiniSquares = () => {
         miniSquare.style.backgroundColor = arrayChosenColours[i];
     }
 }
+
+// Add ids to the squares
+
 window.addEventListener("load", () => (  addIdToSquares()));
-
 const addIdToSquares = () => {
-
     let squares = document.getElementsByClassName("squareGame");
     let arraySquares = Array.from(squares);
-
     for (let i = 0; i < arraySquares.length; i++) {
         let element = arraySquares[i];
         element.id = `squareGame${i}`;
     }
 }
-newArray = [];
+console.log(arrayChosenColours);
+let chosenColoursInRow  = [];
 
 // Add colours to the new array
 
 const addColour = (id) => {
     let whichColour = document.getElementById(id);
     let colour = arrayChosenColours[id];
-    newArray.push(colour);
+    chosenColoursInRow.push(colour);
 }
 
-console.log(newArray);
+console.log(chosenColoursInRow);
+
+// paint the squares 
 
 const paintSquares = () => {
 
     for (let i = 0; i < 4; i++) {
         let squareIwantToPaint = document.getElementById(`squareGame${i}`);
-        let colourChosen = newArray[i];
+        let colourChosen = chosenColoursInRow[i];
         squareIwantToPaint.style.backgroundColor = colourChosen;
     }
 };
-// RANDOM ANSWER
+// Random Answer
 
-let randomArray = [];
+let randomAnswerArray = [];
 const correctAnswer = () => {
     for (i = 0; i < 4; i++) {
 
         random = Math.floor(Math.random() * (arrayChosenColours.length));
-        randomArray.push(arrayChosenColours[random]);
+        randomAnswerArray.push(arrayChosenColours[random]);
     }
 }
 correctAnswer();
@@ -196,13 +199,36 @@ correctAnswer();
 console.log(randomArray);
 
 
-// ANSWER IN THE SQUARES
+// Answer in the squares
 
 const answerInSquares = () => {
     let answer = document.getElementsByClassName("answer");
     let arrayAnswer = Array.from(answer);
     for (i = 0; i < 4; i++){
-        arrayAnswer[i].style.backgroundColor = randomArray[i]
+        arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
     }
 }
 answerInSquares();
+
+// Compare chosenColoursInRow with randomAnswerArray
+
+const compareColours = () => {
+    let i = 0;
+    let successful = 0;
+    randomAnswerArray.map (element => {
+        if (element === chosenColoursInRow[i]){
+            console.log("acertado");
+            successful ++
+            i++;
+        } else {
+            console.log("no acertado");
+        }
+    })
+    console.log(`You got ${successful} correct colours`);
+}
+
+// REMOVE NO FUNCIONA
+// const removeFromArray = (newArray) => {
+//    chosenColoursInRow.pop();
+//    console.log(chosenColoursInRow);
+// };

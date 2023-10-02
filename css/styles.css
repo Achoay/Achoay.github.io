@@ -109,6 +109,11 @@ body {
     border: 0.2em solid white;
 }
 @media (min-width: 768px) {
+    .miniSquare{
+        width: 2em;
+        height: 2em;
+        margin-left: 1em;
+    }
     .squareGame{
         width: 4em;
         height: 4em;
@@ -122,5 +127,5 @@ body {
     }
 }
 #game{
-    padding-right: 10em;
+    margin-right: 22em;
 }
