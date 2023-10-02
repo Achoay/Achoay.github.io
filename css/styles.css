@@ -1,7 +1,8 @@
 
 *{
     font-family: 'Black Ops One' ,regular;
-    background-color: rgb(73, 87, 151);
+    background-color: rgb(0, 0, 0);
+   
 }
 body {
     width: 100vw;
@@ -20,26 +21,43 @@ body {
 }
 
 /* Home Page*/
-
+ 
 .backgroundHome{
     height: 100vh;
+
 }
 .logo{
- font-size: 6em;
+ font-size: 8em;
  color: white;
 }
 
 .homeButton, .levelButton{
-    border-radius: 1em;
-    border: 0.4em solid white;
+    border-radius: 0.5em;
+    border: 0.2em solid white;
     color: white;
     font-size: x-large;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.homeButton:hover, .levelButton:hover{
+    background-image: linear-gradient( to right, 
+    #131313,
+    #333333,
+    #666666,
+    #999999,
+    #a4a0a0,
+    #131313
+      
+      );
+    animation: slidebg 5s linear infinite;
 }
 
+@keyframes slidebg {
+    to { background-position:20vw; }
+  }
 /* Colours Page*/
 
 .square{
