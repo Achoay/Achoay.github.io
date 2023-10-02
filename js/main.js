@@ -1,12 +1,13 @@
+
 // Save name player
 
 const saveName = () => {
-  let valor = document.getElementById("playerName").value;
-  if (name == "") {
-    sessionStorage.setItem("name", "Player 1");
-} else {
-    sessionStorage.setItem("name", name);
-}
+    let name = document.getElementById("playerName").value;
+    if (name == "") {
+        sessionStorage.setItem("name", "Player 1");
+    } else {
+        sessionStorage.setItem("name", name);
+    }
 }
 
 // Colour Picker
@@ -27,7 +28,6 @@ function startup(event) {
 }
 
 const updateSquare = (event, element) => {
-
   let colorSquare = document.getElementById(`square${element.id}`);
   colorSquare.style.backgroundColor = event.target.value;
   let color = getComputedStyle(colorSquare).backgroundColor;
@@ -75,7 +75,6 @@ const saveLevelAdvanced = () => {
 window.addEventListener("load", () => howManyRows());
 
 let board = document.getElementById("game");
-
 const createRows = () => {
     let mainCol = document.createElement("div");
     mainCol.className = "col-12 d-flex";
@@ -162,9 +161,6 @@ const addIdToSquares = () => {
         element.id = `squareGame${i}`;
     }
 }
-onsole.log(arrayChosenColours);
-
-
 newArray = [];
 
 // Add colours to the new array
@@ -179,9 +175,34 @@ console.log(newArray);
 
 const paintSquares = () => {
 
-    for (let i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++) {
         let squareIwantToPaint = document.getElementById(`squareGame${i}`);
         let colourChosen = newArray[i];
         squareIwantToPaint.style.backgroundColor = colourChosen;
     }
 };
+// RANDOM ANSWER
+
+let randomArray = [];
+const correctAnswer = () => {
+    for (i = 0; i < 4; i++) {
+
+        random = Math.floor(Math.random() * (arrayChosenColours.length));
+        randomArray.push(arrayChosenColours[random]);
+    }
+}
+correctAnswer();
+
+console.log(randomArray);
+
+
+// ANSWER IN THE SQUARES
+
+const answerInSquares = () => {
+    let answer = document.getElementsByClassName("answer");
+    let arrayAnswer = Array.from(answer);
+    for (i = 0; i < 4; i++){
+        arrayAnswer[i].style.backgroundColor = randomArray[i]
+    }
+}
+answerInSquares();
