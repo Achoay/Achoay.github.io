@@ -2,7 +2,7 @@
 
 const saveName = () => {
   let valor = document.getElementById("playerName").value;
-  if (name == ""){
+  if (name == "") {
     sessionStorage.setItem("name", "Player 1");
 } else {
     sessionStorage.setItem("name", name);
@@ -146,11 +146,11 @@ window.addEventListener("load", () => (colourMiniSquares()));
 const colourMiniSquares = () => {
 
     for (i = 0; i < arrayChosenColours.length; i++) {
-        let miniSquare = document.getElementById(`miniSquare${i}`);
+        let miniSquare = document.getElementById(`${i}`);
         miniSquare.style.backgroundColor = arrayChosenColours[i];
     }
 }
-indow.addEventListener("load", () => (  addIdToSquares()));
+window.addEventListener("load", () => (  addIdToSquares()));
 
 const addIdToSquares = () => {
 
@@ -162,3 +162,26 @@ const addIdToSquares = () => {
         element.id = `squareGame${i}`;
     }
 }
+onsole.log(arrayChosenColours);
+
+
+newArray = [];
+
+// Add colours to the new array
+
+const addColour = (id) => {
+    let whichColour = document.getElementById(id);
+    let colour = arrayChosenColours[id];
+    newArray.push(colour);
+}
+
+console.log(newArray);
+
+const paintSquares = () => {
+
+    for (let i = 0; i < 4; i++){
+        let squareIwantToPaint = document.getElementById(`squareGame${i}`);
+        let colourChosen = newArray[i];
+        squareIwantToPaint.style.backgroundColor = colourChosen;
+    }
+};
