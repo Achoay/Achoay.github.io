@@ -14,8 +14,19 @@
 </head>
 <body>
     <nav class="navbar p-0">
-        <div class="container-fluid justify-content-center heigthNavbar">
-        <a href="../index.html" class="navbar-brand fs-1 text-light">Mastermind</a>
+        <div class="container-fluid heigthNavbar">
+            <div class="col-11 d-flex align-items-center justify-content-center">
+                <a href="../index.html" class="navbar-brand fs-2 text-light BlackOpsOnefont ps-5">Mastermind</a>
+            </div>
+            <div class="col-1 d-flex d-flex justify-content-end">
+                <div class="nav-item mx-1 fs-2 text-secondary BlackOpsOnefont">
+                    <a class="nav-link" href="../index.html">⇦</a>
+                </div>
+                <div class="nav-item mx-1 fs-2 text-secondary BlackOpsOnefont ">
+                    <a class="nav-link" href="./about.html">?</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <div class="container-fluid background d-flex flex-column justify-content-evenly">
         <div class="row h-25 d-flex">
@@ -24,18 +35,18 @@
             </div>
             <div class="col-12 col-md-8 d-flex align-items-center justify-content-md-start">
             <input type="name" class="col-10 col-md-4 fs-4" placeholder="Player 1" id="playerName" maxlength="30">
-            <button class="btn btn-outline-secondary fs-5 ms-3" type="button" onclick="saveName()">✔️</button>
+            <button class="btn btn-outline-secondary fs-5 ms-2" type="button" onclick="saveName()">✔️</button>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 h-50">
         <div class="col d-flex justify-content-center">
-            <a href="./colours.html" class=" col-10 h-50 levelButton" onclick="saveLevelBeginner()">BEGINNER</a>
+            <a href="./colours.html" class="col-10 h-50 levelButton" onclick="saveLevelBeginner(); onclick=saveName()">BEGINNER</a>
         </div>
         <div class="col d-flex justify-content-center"> 
-            <a href="./colours.html" class="col-10 h-50 levelButton" onclick="saveLevelIntermediate()">INTERMEDIATE</a>
+            <a href="./colours.html" class="col-10 h-50 levelButton" onclick="saveLevelIntermediate(); onclick=saveName()">INTERMEDIATE</a>
         </div>
         <div class="col d-flex justify-content-center">
-            <a href="./colours.html" class="col-10 h-50 levelButton" onclick="saveLevelAdvanced()">ADVANCED</a>
+            <a href="./colours.html" class="col-10 h-50 levelButton" onclick="saveLevelAdvanced(); onclick=saveName()">ADVANCED</a>
     </div>
    </div>
   </div>

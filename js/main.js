@@ -2,9 +2,12 @@
 
 const saveName = () => {
   let valor = document.getElementById("playerName").value;
-  sessionStorage.setItem("name", valor);
-
-};
+  if (name == ""){
+    sessionStorage.setItem("name", "Player 1");
+} else {
+    sessionStorage.setItem("name", name);
+}
+}
 
 // Colour Picker
 
@@ -69,7 +72,7 @@ const saveLevelAdvanced = () => {
 
 // Game
 
-window.addEventListener("load", ()=>howManyRows());
+window.addEventListener("load", () => howManyRows());
 
 let board = document.getElementById("game");
 
@@ -79,16 +82,16 @@ const createRows = () => {
     let squaresDiv = document.createElement("div");
     squaresDiv.className = "d-flex justify-content-evenly";
 
-    for(let i=0; i < 4; i++){
+    for(let i = 0; i < 4; i++) {
         let eachSquare = document.createElement("div");
-        eachSquare.className = "squareGame m-2";
+        eachSquare.className = "squareGame";
         squaresDiv.appendChild(eachSquare)
     }
 
     let circlesDiv = document.createElement("div");
     circlesDiv.className = "d-flex justify-content-evenly align-items-center";
 
-    for(let i=0; i < 4; i++){
+    for(let i = 0; i < 4; i++) {
         let eachCircle = document.createElement("div");
         eachCircle.className = "circle m-1";
         circlesDiv.appendChild(eachCircle)
@@ -100,16 +103,16 @@ const createRows = () => {
 };
 const howManyRows = () => {
 
-  if (selectedLevel == "beginnerRow"){
-      for (let i=0; i < 10; i++){
+  if (selectedLevel == "beginnerRow") {
+      for (let i = 0; i < 10; i++) {
           createRows();
       }
-  } else if (selectedLevel == "intermediateRow"){
-      for (let i=0; i < 8; i++){
+  } else if (selectedLevel == "intermediateRow") {
+      for (let i = 0; i < 8; i++) {
           createRows();
       }
   } else {
-      for (let i=0; i < 6; i++){
+      for (let i = 0; i < 6; i++) {
           createRows();
       }
   }
@@ -117,17 +120,17 @@ const howManyRows = () => {
 
 // LEVEL
 
-window.addEventListener("load", ()=>(chosenLevel()));
+window.addEventListener("load", () => (chosenLevel()));
 
-const chosenLevel = ()=>{
+const chosenLevel = () => {
 
     let level = document.getElementById("level");
     let p = document.createElement("p");
 
-    if (selectedLevel == "beginnerRow"){
+    if (selectedLevel == "beginnerRow") {
         p.innerHTML = "LEVEL: beginner";
         level.appendChild(p);
-    } else if (selectedLevel == "intermediateRow"){
+    } else if (selectedLevel == "intermediateRow") {
         p.innerHTML = "LEVEL: intermediate";
         level.appendChild(p);
     } else {
@@ -138,12 +141,24 @@ const chosenLevel = ()=>{
 
 // CHOSEN COLOURS 
 
-window.addEventListener("load", ()=>(colourMiniSquares()));
+window.addEventListener("load", () => (colourMiniSquares()));
 
 const colourMiniSquares = () => {
 
-    for(i = 0; i < arrayChosenColours.length; i++){
+    for (i = 0; i < arrayChosenColours.length; i++) {
         let miniSquare = document.getElementById(`miniSquare${i}`);
         miniSquare.style.backgroundColor = arrayChosenColours[i];
+    }
+}
+indow.addEventListener("load", () => (  addIdToSquares()));
+
+const addIdToSquares = () => {
+
+    let squares = document.getElementsByClassName("squareGame");
+    let arraySquares = Array.from(squares);
+
+    for (let i = 0; i < arraySquares.length; i++) {
+        let element = arraySquares[i];
+        element.id = `squareGame${i}`;
     }
 }
