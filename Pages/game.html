@@ -28,7 +28,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid p-0 m-0 background d-flex flex-column align-items-center flex-lg-row text-light">
+    <div class="container-fluid p-4 m-0 background d-flex flex-column align-items-center flex-lg-row text-light">
         <div class="row p-0 m-0 d-flex flex-column">
             <div class="col h4 m-0" id="level"></div>
             <div class="col d-flex">
@@ -49,7 +49,7 @@
             </div>
             <div>
             <div class="btn btn-outline-secondary m-1" type="button" onclick="removeFromArray()">remove</div>
-            <button class="btn btn-outline-secondary m-1" type="button" onclick="compareColours(); paintCircles();">check</button>
+            <button class="btn btn-outline-secondary m-1" type="button" id="check" onclick="compareColours(); paintCircles(); check(); winner()">check</button>
         </div>
     </div>
     <div class="row flex-column" id="game"></div>
