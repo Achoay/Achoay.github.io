@@ -28,6 +28,7 @@ body {
 .backgroundHome {
 
     height: 100vh;
+    width: 100vw;
 }
 
 .logo{
@@ -35,7 +36,8 @@ body {
    color: white;
 }
 
-.homeButton, .levelButton{
+.gamebutton {
+    height:3em;
     border-radius: 0.5em;
     border: 0.2em solid white;
     color: rgb(255, 255, 255);
@@ -137,4 +139,20 @@ body {
 
 #game{
     margin-right: 22em;
+}
+
+/* RESULTS PAGE */
+
+.letters{
+    font-size: 4em;
+}
+
+@media (min-width: 768px) {
+
+    .letters{
+        font-size: 8em;
+    }
+}
+#winner {
+    display: none;
 }

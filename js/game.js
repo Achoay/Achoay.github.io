@@ -107,17 +107,15 @@ console.log(randomAnswerArray);
 
 // ANSWER IN THE SQUARES
 
-// const answerInSquares = () => {
+ const answerInSquares = () => {
 
-   // let answer = document.getElementsByClassName("answer");
-   // let arrayAnswer = Array.from(answer);
-
-    //for (i = 0; i < 4; i++) {
-     //   arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
-  //  }
-//}
-
-//answerInSquares();
+   let answer = document.getElementsByClassName("answer");
+   let arrayAnswer = Array.from(answer);
+    for (i = 0; i < 4; i++) {
+    arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
+   }
+}
+answerInSquares();
 
 
 // ADD IDS TO THE ROWS
@@ -169,6 +167,7 @@ addIdToCircles();
 let chosenColoursInRow = [];
 
 // Add colours to the new array
+
 const addColour = (id) => {
     let whichColour = document.getElementById(id);
     let colour = arrayChosenColours[id];
@@ -177,8 +176,6 @@ const addColour = (id) => {
 
 
 console.log(chosenColoursInRow);
-
-
 
 // paint the squares 
 
@@ -252,4 +249,29 @@ const winner = () => {
          alert("congratulations");
      };
  }
+
+ // CHECK IF I HAVE WON
+
+const winner = () => {
+
+    let stringArrayCircles = arrayCircles.toString();
+    let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
+     if(stringArrayCircles === correctAnswer{
+    
+    window.location.href = "./result.html";
+        // let win = document.getElementById("winner");
+        // win.style.display = "flex";
+        // // alert("congratulations");
+    }
+}
+
+// CHANGE ROWS AND EMPTY THE ARRAY OF COLOURS
+const check = () => {
+    if (j < 9) {
+        j++;
+        chosenColoursInRow.length = "";
+    } else {
+        window.location.href = "./result.html";
+    }
+}
 
