@@ -3,7 +3,6 @@
 let board = document.getElementById("game");
 
 const createRows = () => {
-
     let mainCol = document.createElement("div");
     mainCol.className = "col-12 d-flex eachRow";
 
@@ -15,7 +14,7 @@ const createRows = () => {
         eachSquare.className = "squareGame";
         squaresDiv.appendChild(eachSquare)
     }
-
+    
     let circlesDiv = document.createElement("div");
     circlesDiv.className = "d-flex justify-content-evenly align-items-center";
 
@@ -108,17 +107,17 @@ console.log(randomAnswerArray);
 
 // ANSWER IN THE SQUARES
 
-const answerInSquares = () => {
+// const answerInSquares = () => {
 
-    let answer = document.getElementsByClassName("answer");
-    let arrayAnswer = Array.from(answer);
+   // let answer = document.getElementsByClassName("answer");
+   // let arrayAnswer = Array.from(answer);
 
-    for (i = 0; i < 4; i++) {
-        arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
-    }
-}
+    //for (i = 0; i < 4; i++) {
+     //   arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
+  //  }
+//}
 
-answerInSquares();
+//answerInSquares();
 
 
 // ADD IDS TO THE ROWS
@@ -199,21 +198,19 @@ const paintSquares = () => {
     }
 };
 
+// REMOVE CHOSEN COLOUS FROM THE ARRAY
 
+const removeFromArray = () => {
 
+    index = chosenColoursInRow.length - 1;
+    chosenColoursInRow.pop();
+    if(chosenColoursInRow.length <= 4){
+        squareIwantToPaint = document.getElementById(`row${j}-square${index}`);
+        squareIwantToPaint.style.backgroundColor = "";
+    }
+};
 
-// REMOVE NO FUNCIONA
-// const removeFromArray = () => {
-//    chosenColoursInRow.pop();
-//    console.log(chosenColoursInRow);
-// };
-
-
-
-// COMPARE chosenColoursInRow with randomAnswerArray
-
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! LIMITAR EL NUMERO DE CLICKS 
+// COMPARE THE CHOOSEN COLOURS WITH THE CORRECT ANSWER
 
 let arrayCircles = [];
 
@@ -255,3 +252,4 @@ const winner = () => {
          alert("congratulations");
      };
  }
+
