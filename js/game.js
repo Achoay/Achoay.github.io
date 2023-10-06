@@ -77,7 +77,6 @@ chosenLevel();
 // CHOSEN COLOURS 
 
 const colourMiniSquares = () => {
-
     for (i = 0; i < arrayChosenColours.length; i++) {
         let miniSquare = document.getElementById(`${i}`);
         miniSquare.style.backgroundColor = arrayChosenColours[i];
@@ -92,7 +91,6 @@ colourMiniSquares();
 let randomAnswerArray = [];
 
 const correctAnswer = () => {
-
     for (i = 0; i < 4; i++) {
 
         random = Math.floor(Math.random() * (arrayChosenColours.length));
@@ -108,7 +106,6 @@ console.log(randomAnswerArray);
 // ANSWER IN THE SQUARES
 
  const answerInSquares = () => {
-
    let answer = document.getElementsByClassName("answer");
    let arrayAnswer = Array.from(answer);
     for (i = 0; i < 4; i++) {
@@ -135,7 +132,6 @@ const addIdToSquares = () => {
 
     let squares = document.getElementsByClassName("squareGame");
     let arraySquares = Array.from(squares);
-
     for (let j = 0; j < howMany; j++){
         for (let i = 0; i < 4; i++) {
             let index = j * 4 + i;
@@ -151,7 +147,6 @@ const addIdToCircles = () => {
 
     let circles = document.getElementsByClassName("circle");
     let arrayCircles = Array.from(circles);
-
     for (let j = 0; j < howMany; j++){
         for (let i = 0; i < 4; i++) {
             let index = j * 4 + i;
@@ -166,7 +161,7 @@ addIdToCircles();
 
 let chosenColoursInRow = [];
 
-// Add colours to the new array
+// ADD COLOURS THE NEW ARRAY AWAY
 
 const addColour = (id) => {
     let whichColour = document.getElementById(id);
@@ -177,7 +172,7 @@ const addColour = (id) => {
 
 console.log(chosenColoursInRow);
 
-// paint the squares 
+// PAIN THE SQUARES
 
 let j = 0;
 const check = () => {
@@ -225,7 +220,7 @@ const compareColours = () => {
     console.log(arrayCircles);
 };
 
-// paint the circles 
+// PAINT THE CIRCLES
 
 const paintCircles = () => {
 
@@ -236,50 +231,26 @@ const paintCircles = () => {
     }
 };
 
+ // WINNER
 
-// Winner
+ const winner = (showWinnerPage) => {
 
-//const winner = () => {
+    let stringArrayCircles = arrayCircles.toString();
+    let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
+    if(stringArrayCircles === correctAnswer){
+     sessionStorage.setItem("result", "winner");  
+      window.location.href = "./result.html";
+    }
+}
 
-  //  let stringArrayCircles = arrayCircles.toString();
- 
- //   let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
- 
- //   console.log(stringArrayCircles)
- 
- //    if(stringArrayCircles === correctAnswer){
-   //  alert("congratulations");
- // };
-//}
+// LOOSER
 
- // CHECK IF I HAVE WON
-
-//const winner = (showWinnerPage) => {
-
-    //let stringArrayCircles = arrayCircles.toString();
-    //let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
-    //if(stringArrayCircles === correctAnswer){
-    // sessionStorage.setItem("result", "winner");  
-     // window.location.href = "./result.html";
+//let check = (showWinnerPage) => {
+   // if (j < 9) {
+      // j++;
+      //  chosenColoursInRow.length = "";
+   // } else {
+        //sessionStorage.setItem("result", "looser");
+      // window.location.href = "./result.html";
    // }
-//}
-
-// CHANGE ROWS AND EMPTY THE ARRAY OF COLOURS
-
-//const check = (showWinnerPage) => {
-    //if (j < 9) {
-       //j++;
-        //chosenColoursInRow.length = "";
-    //} else {
-      //  sessionStorage.setItem("result", "looser");
-     //   window.location.href = "./result.html";
-   // }
-//}
-//if (j < (howMany - 1)) {
-   // j++;
-   // chosenColoursInRow.length = "";
-//} else {
-  // sessionStorage.setItem("result", "loser");
-   // window.location.href = "./result.html";}
-//}
 //}
