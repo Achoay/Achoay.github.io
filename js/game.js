@@ -183,7 +183,6 @@ let j = 0;
 const check = () => {
     j++;
     chosenColoursInRow.length = "";
-
     console.log(chosenColoursInRow);
     console.log(j);
 }
@@ -226,7 +225,6 @@ const compareColours = () => {
     console.log(arrayCircles);
 };
 
-
 // paint the circles 
 
 const paintCircles = () => {
@@ -237,41 +235,51 @@ const paintCircles = () => {
         circleIwantToPaint.style.backgroundColor = paintAnswer;
     }
 };
-const winner = () => {
 
-    let stringArrayCircles = arrayCircles.toString();
+
+// Winner
+
+//const winner = () => {
+
+  //  let stringArrayCircles = arrayCircles.toString();
  
-    let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
+ //   let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
  
-    console.log(stringArrayCircles)
+ //   console.log(stringArrayCircles)
  
-     if(stringArrayCircles === correctAnswer){
-         alert("congratulations");
-     };
- }
+ //    if(stringArrayCircles === correctAnswer){
+   //  alert("congratulations");
+ // };
+//}
 
  // CHECK IF I HAVE WON
 
-const winner = () => {
+//const winner = (showWinnerPage) => {
 
-    let stringArrayCircles = arrayCircles.toString();
-    let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
-     if(stringArrayCircles === correctAnswer{
-    
-    window.location.href = "./result.html";
-        // let win = document.getElementById("winner");
-        // win.style.display = "flex";
-        // // alert("congratulations");
-    }
-}
+    //let stringArrayCircles = arrayCircles.toString();
+    //let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
+    //if(stringArrayCircles === correctAnswer){
+    // sessionStorage.setItem("result", "winner");  
+     // window.location.href = "./result.html";
+   // }
+//}
 
 // CHANGE ROWS AND EMPTY THE ARRAY OF COLOURS
-const check = () => {
-    if (j < 9) {
-        j++;
-        chosenColoursInRow.length = "";
-    } else {
-        window.location.href = "./result.html";
-    }
-}
 
+//const check = (showWinnerPage) => {
+    //if (j < 9) {
+       //j++;
+        //chosenColoursInRow.length = "";
+    //} else {
+      //  sessionStorage.setItem("result", "looser");
+     //   window.location.href = "./result.html";
+   // }
+//}
+//if (j < (howMany - 1)) {
+   // j++;
+   // chosenColoursInRow.length = "";
+//} else {
+  // sessionStorage.setItem("result", "loser");
+   // window.location.href = "./result.html";}
+//}
+//}

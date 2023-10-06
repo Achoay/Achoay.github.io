@@ -9,6 +9,7 @@ const saveName = () => {
         sessionStorage.setItem("name", name);
     }
 }
+let name = sessionStorage.getItem("playerName")
 
 // Colour Picker
 
