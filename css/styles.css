@@ -98,14 +98,14 @@ body {
 /* Game Page*/
 
 .minisquare{
-    width: 1.5em;
-    height: 1.5em;
-    margin-left: 1em;
+    width: 2em;
+    height: 2em;
+    margin-left: 3em;
 
 }
 .squareGame{
     width: 2em;
-    height: 2em;
+    height:2em;
     border: 0.1em solid white;
     border-radius: 1em;
 }
@@ -119,14 +119,15 @@ body {
 @media (min-width: 768px) {
 
     .miniSquare{
-       width: 2em;
-       height: 2em;
-        margin-left: 1em;  
+       width: 3em;
+       height: 3em;
+       margin-left: 1em;
+       border-radius:1em;  
 }
     
     .squareGame{
-        width: 4em;
-        height: 4em;
+        width: 4.5em;
+        height: 4.5em;
         border: 0.2em solid white;
         
     }
@@ -138,8 +139,11 @@ body {
     }
 }
 
-#game{
-    margin-right: 22em;
+#game {
+
+  padding-right: 10em; 
+  padding-left:  10em;
+
 }
 
 /* RESULTS PAGE */
@@ -170,5 +174,30 @@ body {
     cursor: pointer;
     justify-content: center;
     display: flex;
+ }
+ #checkbutton{
+     
+    border-radius: 0.5em;
+    border: 0.2em solid white;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+    
+ }
+ #removebutton{
+
+    border-radius: 0.5em;
+    border: 0.2em solid white;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
  }
 }

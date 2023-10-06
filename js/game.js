@@ -105,14 +105,14 @@ console.log(randomAnswerArray);
 
 // ANSWER IN THE SQUARES
 
- const answerInSquares = () => {
-   let answer = document.getElementsByClassName("answer");
-   let arrayAnswer = Array.from(answer);
-    for (i = 0; i < 4; i++) {
-    arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
-   }
-}
-answerInSquares();
+ //const answerInSquares = () => {
+  // let answer = document.getElementsByClassName("answer");
+  //let arrayAnswer = Array.from(answer);
+   // for (i = 0; i < 4; i++) {
+   // arrayAnswer[i].style.backgroundColor = randomAnswerArray[i]
+   //}
+//}
+//answerInSquares();
 
 
 // ADD IDS TO THE ROWS
