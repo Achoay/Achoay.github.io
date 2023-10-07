@@ -243,14 +243,15 @@ const paintCircles = () => {
     }
 }
 
-// LOOSER
+// LOOSER (No funciona)
 
-//let check = (showWinnerPage) => {
-   // if (j < 9) {
-      // j++;
-      //  chosenColoursInRow.length = "";
-   // } else {
-        //sessionStorage.setItem("result", "looser");
-      // window.location.href = "./result.html";
-   // }
-//}
+const loser = (showWinnerPage) => {
+
+    if (j < (howMany - 1)) {
+        j++;
+        chosenColoursInRow.length = "";
+    } else {
+        sessionStorage.setItem("result", "loser");
+        window.location.href = "./result.html";
+    }
+}

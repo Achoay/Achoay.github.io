@@ -1,24 +1,33 @@
 
 *{
     font-family: 'Black Ops One',regular;
-    background: #000000;
-   
+
 }
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    background-image: url(https://images.hdqwalls.com/download/wooden-background-1366x768.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
 
-}  
+.homeImg {
+
+background-repeat: no-repeat;
+height: 800px;
+
+}
 .background {
 
     height:90vh;
 }
 .heigthNavbar{
-
     height: 10vh;   
 }
+
 .navbar-brand{
     background-color: rgba(0, 0, 0, 0);
 }
@@ -26,7 +35,6 @@ body {
 /* Home Page*/
  
 .backgroundHome {
-
     height: 100vh;
     width: 100vw;
 }
@@ -35,44 +43,53 @@ body {
    font-size: 8em;
    color: white;
 }
-
 .homeButton, .levelButton{
-
-    border-radius: 0.5em;
+    border-radius: 1em;
     border: 0.2em solid white;
     color: rgb(255, 255, 255);
-    font-size: x-large;
+    font-size: X-large;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-right: 3em;
 }
 .homeButton:hover, .levelButton:hover, .gameButton:hover{
     background-image: linear-gradient( to right, 
-    #131313,
+    #030303,
     #333333,
     #666666,
     #999999,
     #a4a0a0,
-    #131313
-      
-      );
-    animation: slidebg 3s linear infinite;
+    #070707
+    );
+
+    animation: slidebg 5s linear infinite;
 }
 
 @keyframes slidebg {
     to { background-position:20vw; }
   }
+
+
 /* Colours Page*/
 
 .square{
+
     width: 6em;
     height: 6em;
     border: 0.2em solid white;
     border-radius: 1em;
 }
+.colorpicker{
+
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
 .coloursPage{
+
     overflow-x: hidden;
 }
 #intermediateRow, #beginnerRow, #advancedRow {
@@ -107,7 +124,7 @@ body {
     width: 2em;
     height:2em;
     border: 0.1em solid white;
-    border-radius: 1em;
+    border-radius: 1.5em;
 }
 .circle{
     width: 1em;
@@ -121,15 +138,18 @@ body {
     .miniSquare{
        width: 3em;
        height: 3em;
-       margin-left: 1em;
+       margin-left: 1.5em;
        border-radius:1em;  
-}
+       cursor: pointer;
+   }
     
     .squareGame{
-        width: 4.5em;
-        height: 4.5em;
+        width: 4.2em;
+        height: 4.2em;
         border: 0.2em solid white;
-        
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+    
     }
     .circle{
         width: 2em;
@@ -137,13 +157,23 @@ body {
         border-radius: 50%;
         border: 0.2em solid white;
     }
+    #checkbutton{
+     
+        border-radius: 0.5em;
+        border: 0.2em solid white;
+        color: rgb(255, 255, 255);
+        font-size: x-large;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer
+     }
 }
-
 #game {
-
-  padding-right: 10em; 
-  padding-left:  10em;
-
+    padding-right: 10em; 
+    padding-left:  5em;
+  }
 }
 
 /* RESULTS PAGE */
@@ -154,12 +184,12 @@ body {
 
 @media (min-width: 768px) {
 
-.letters {
+.letters{
     font-size: 6em;
 
   }
 
-#looser, #winner{
+#loser, #winner{
     display: none;
 }
 .gameButton{
@@ -174,30 +204,5 @@ body {
     cursor: pointer;
     justify-content: center;
     display: flex;
- }
- #checkbutton{
-     
-    border-radius: 0.5em;
-    border: 0.2em solid white;
-    color: rgb(255, 255, 255);
-    font-size: x-large;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer
-    
- }
- #removebutton{
-
-    border-radius: 0.5em;
-    border: 0.2em solid white;
-    color: rgb(255, 255, 255);
-    font-size: x-large;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
  }
 }
