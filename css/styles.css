@@ -10,24 +10,19 @@ body {
     padding: 0; 
     background-image: url(https://images.hdqwalls.com/download/wooden-background-1366x768.jpg);
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat:repeat;
     background-position: center;
 }
-
 .homeImg {
-
-background-repeat: no-repeat;
-height: 800px;
-
+    background-repeat: no-repeat;
+    height: 800px;
 }
 .background {
-
     height:90vh;
 }
 .heigthNavbar{
     height: 10vh;   
 }
-
 .navbar-brand{
     background-color: rgba(0, 0, 0, 0);
 }
@@ -40,12 +35,13 @@ height: 800px;
 }
 
 .logo{
-   font-size: 8em;
-   color: white;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    
 }
-.homeButton, .levelButton{
+.homeButton {
     border-radius: 1em;
-    border: 0.2em solid white;
+    border: 0.2em solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     font-size: X-large;
     text-decoration: none;
@@ -53,18 +49,23 @@ height: 800px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-right: 3em;
+}
+.levelButton{
+
+    border-radius: 1em;
+    border: 0.2em solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: X-large;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 3em; 
 }
 .homeButton:hover, .levelButton:hover, .gameButton:hover{
-    background-image: linear-gradient( to right, 
-    #030303,
-    #333333,
-    #666666,
-    #999999,
-    #a4a0a0,
-    #070707
-    );
-
+    background: rgb(207,117,42);
+    background: radial-gradient(circle, rgba(207,117,42,0.9717072740112994) 44%, rgba(252,227,69,1) 100%);
     animation: slidebg 5s linear infinite;
 }
 
