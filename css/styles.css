@@ -19,6 +19,7 @@ body {
 }
 .background {
     height:90vh;
+
 }
 .heigthNavbar{
     height: 10vh;   
@@ -101,7 +102,7 @@ body {
 
 #playerName{
     height: 2em;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.74);
 
 }
 
@@ -134,12 +135,12 @@ body {
     border: 0.2em solid white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 568px) {
 
     .miniSquare{
        width: 3em;
        height: 3em;
-       margin-left: 1.5em;
+       margin-left: 1em;
        border-radius:1em;  
        cursor: pointer;
    }
@@ -150,6 +151,7 @@ body {
         border: 0.2em solid white;
         margin-top: 0.5em;
         margin-right: 0.5em;
+        border-radius: 1.5em;
     
     }
     .circle{
@@ -170,10 +172,9 @@ body {
         justify-content: center;
         cursor: pointer
      }
-}
 #game {
     padding-right: 10em; 
-    padding-left:  5em;
+    padding-left:  8em;
   }
 }
 
@@ -187,7 +188,6 @@ body {
 
 .letters{
     font-size: 6em;
-
   }
 
 #loser, #winner{
