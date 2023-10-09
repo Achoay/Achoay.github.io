@@ -6,7 +6,7 @@ const saveName = () => {
     if (name == "") {
         sessionStorage.setItem("name", "Player 1");
     } else {
-        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("name , name");
     }
 }
 let name = sessionStorage.getItem("playerName")

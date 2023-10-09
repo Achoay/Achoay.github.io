@@ -52,7 +52,6 @@ const howManyRows = () => {
 
 howManyRows();
 
-
 // LEVEL
 
 const chosenLevel = () => {

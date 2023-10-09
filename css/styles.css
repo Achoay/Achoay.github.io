@@ -9,9 +9,9 @@ body {
     margin: 0;
     padding: 0; 
     background-image: url(https://images.hdqwalls.com/download/wooden-background-1366x768.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat:repeat;
-    background-position: center;
+    
 }
 .homeImg {
     background-repeat: no-repeat;
@@ -73,7 +73,6 @@ body {
 @keyframes slidebg {
     to { background-position:20vw; }
   }
-
 
 /* Colours Page*/
 
