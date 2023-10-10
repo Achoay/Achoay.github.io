@@ -195,8 +195,8 @@ const removeFromArray = () => {
     index = chosenColoursInRow.length - 1;
     chosenColoursInRow.pop();
     if(chosenColoursInRow.length <= 4){
-        squareIwantToPaint = document.getElementById(`row${j}-square${index}`);
-        squareIwantToPaint.style.backgroundColor = "";
+       squareIwantToPaint = document.getElementById(`row${j}-square${index}`);
+       squareIwantToPaint.style.backgroundColor = "";
     }
 };
 
@@ -237,7 +237,7 @@ const paintCircles = () => {
     let stringArrayCircles = arrayCircles.toString();
     let correctAnswer = "rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0)";
     if(stringArrayCircles === correctAnswer){
-     sessionStorage.setItem("result", "winner");  
+      sessionStorage.setItem("result", "winner");  
       window.location.href = "./result.html";
     }
 }
