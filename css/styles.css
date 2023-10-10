@@ -137,11 +137,11 @@ body {
 @media (min-width: 568px) {
 
     .miniSquare{
-       width: 3em;
-       height: 3em;
-       margin-left: 1em;
-       border-radius:1em;  
-       cursor: pointer;
+        width: 3em;
+        height: 3em;
+        margin-left: 1em;
+        border-radius:1em;  
+        cursor: pointer;
    }
     
     .squareGame{
@@ -170,7 +170,7 @@ body {
         align-items: center;
         justify-content: center;
         cursor: pointer
-     }
+    }
 #game {
     padding-right: 10em; 
     padding-left:  8em;
